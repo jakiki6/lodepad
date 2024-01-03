@@ -4,14 +4,11 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtHelper;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.network.packet.s2c.play.PositionFlag;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -41,9 +38,9 @@ public class LodepadBlockEntity extends BlockEntity {
             return;
         }
 
-        world.playSound(null, BlockPos.ofFloored(entity.getPos()), SoundEvents.ENTITY_PLAYER_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+        world.playSound(null, BlockPos.ofFloored(entity.getPos()), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
         entity.teleport(targetWorld, pos.getPos().getX() + 0.5, pos.getPos().getY() + 1, pos.getPos().getZ() + 0.5, Set.of(PositionFlag.X, PositionFlag.Y, PositionFlag.Z, PositionFlag.X_ROT, PositionFlag.Y_ROT), entity.getYaw(), entity.getPitch());
-        entity.getWorld().playSound(null, BlockPos.ofFloored(entity.getPos()), SoundEvents.ENTITY_PLAYER_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+        entity.getWorld().playSound(null, BlockPos.ofFloored(entity.getPos()), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
     }
 
     @Override

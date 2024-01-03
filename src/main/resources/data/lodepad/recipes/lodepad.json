@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "OEO",
-    "NLN",
-    "ONO"
+    "NEN",
+    "ELE",
+    "OOO"
   ],
   "key": {
     "L": {
