@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "lodepad:block/lodepad_bottom",
+    "side": "lodepad:block/lodepad_side",
+    "top": "lodepad:block/lodepad_top_on"
+  }
+}

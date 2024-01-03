@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "enabled=false": {
+      "model": "lodepad:block/lodepad_off"
+    },
+    "enabled=true": {
+      "model": "lodepad:block/lodepad_on"
+    }
+  }
+}
