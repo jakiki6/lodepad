@@ -41,6 +41,7 @@ public class LodepadBlock extends Block implements BlockEntityProvider {
             LodepadBlockEntity be = (LodepadBlockEntity) world.getBlockEntity(pos);
             assert be != null;
             be.pos = CompassItem.createLodestonePos(player.getStackInHand(hand).getOrCreateNbt());
+            be.markDirty();
             world.setBlockState(pos, state.with(ENABLED, true));
             world.playSound(null, pos, SoundEvents.ITEM_LODESTONE_COMPASS_LOCK, SoundCategory.PLAYERS, 1.0F, 1.2F);
             return ActionResult.SUCCESS;
